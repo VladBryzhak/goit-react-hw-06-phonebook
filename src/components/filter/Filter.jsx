@@ -1,14 +1,18 @@
-import { FilterTitle, StyleInput } from "./Filter.styled";
+import { useDispatch } from 'react-redux';
+import { FilterTitle, StyleInput } from './Filter.styled';
+import { findContact } from '../../redux/filterSlice';
 
-export const Filter = ({ findContact }) => {
+export const Filter = () => {
+  const dispatch = useDispatch();
   return (
     <label>
       <FilterTitle>Find contacts by name</FilterTitle>
-        <StyleInput
+      <StyleInput
         type="text"
         name="filter"
-        onChange={evt => findContact(evt.target.value)}
-      />      
+        placeholder="Search"
+        onChange={evt => dispatch(findContact(evt.target.value))}
+      />
     </label>
   );
 };

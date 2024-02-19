@@ -1,12 +1,12 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 import 'modern-normalize';
-
 
 export const GlobalStyle = createGlobalStyle`
 body {
   margin: 0;
   padding-top: ${p => p.theme.spasing(5)};
   padding-bottom: ${p => p.theme.spasing(5)};
+  background-color: ${p => p.theme.colors.lightGray};
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -52,4 +52,4 @@ img {
   max-width: 100%;
   height: auto;
 }
-`
+`;
